@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Xero Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+      window.onload = function () {
+        var options = {
+          exportEnabled: true,
+          animationEnabled: true,
+          data: [
+            {
+              type: "splineArea",
+              dataPoints: [
+                {
+                  y: 10,
+                },
+                {
+                  y: 6,
+                },
+                {
+                  y: 14,
+                },
+                {
+                  y: 12,
+                },
+                {
+                  y: 19,
+                },
+                {
+                  y: 14,
+                },
+                {
+                  y: 26,
+                },
+                {
+                  y: 10,
+                },
+                {
+                  y: 22,
+                },
+              ],
+            },
+          ],
+        };
+        $("#chartContainerOne").CanvasJSChart(options);
+      };
+
+    </script>
+    <script>
+      window.onload = function() {
+      
+      var chart = new CanvasJS.Chart("chartContainerTwo", {
+        theme: "light2", // "light1", "light2", "dark1", "dark2"
+        exportEnabled: true,
+        animationEnabled: true,
+        data: [{
+          type: "pie",
+          startAngle: 25,
+          toolTipContent: "<b>{label}</b>: {y}%",
+          showInLegend: "true",
+          legendText: "{label}",
+          indexLabelFontSize: 16,
+          indexLabel: "{label} - {y}%",
+          dataPoints: [
+            { y: 51.08, label: "Chrome" },
+            { y: 27.34, label: "Internet Explorer" },
+            { y: 10.62, label: "Firefox" },
+            { y: 5.02, label: "Microsoft Edge" },
+            { y: 4.07, label: "Safari" },
+            { y: 1.22, label: "Opera" },
+            { y: 0.44, label: "Others" }
+          ]
+        }]
+      });
+      chart.render();
+      
+      }
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-nav-color" id="navbar">
+      <div class="border-tranparent">
+        <div class="navbar-brand dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Demo Company (Global)
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item disabled xero-heading" href="#"
+              ><i class="xero-icon">xero</i> Demo Company (Global)</a
+            >
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Files</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Do more with Xero</a>
+            <a class="dropdown-item" href="#"
+              >WorkflowMax <i class="fa fa-external-link"></i>
+            </a>
+            <a class="dropdown-item" href="#">Hubdoc</a>
+            <a class="dropdown-item" href="#">App Marketplace</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#"
+              >My Xero <i class="fa fa-external-link"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">dashboard</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="businessDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">business</a>
+            <div class="dropdown-menu" aria-labelledby="businessDropdown">
+              <a class="dropdown-item" href="#">Short-term cash flow</a>
+              <a class="dropdown-item" href="#">Business snapshot</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Invoices</a>
+              <a class="dropdown-item" href="#">Quotes</a>
+              <a class="dropdown-item" href="#">Sales overview</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Bills to pay</a>
+              <a class="dropdown-item" href="#">Purchase orders</a>
+              <a class="dropdown-item" href="#">Purchase overview</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Expense claims</a>
+              <a class="dropdown-item" href="#">Products and services</a>
+              <a class="dropdown-item" href="#">Pay run</a>
+              <a class="dropdown-item" href="#">Cheques</a>
+            </div> 
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountingDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">accounting</a>
+            <div class="dropdown-menu" aria-labelledby="accountingDropdown">
+              <a class="dropdown-item" href="#">Bank accounts</a>
+              <a class="dropdown-item" href="#">Reports</a>
+              <a class="dropdown-item" href="#">Advanced</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item disabled" href="#"><i class="fa fa-star"></i> Reports</a>
+              <a class="dropdown-item" href="#">Account Transactions</a>
+              <a class="dropdown-item" href="#">Aged Payables Summary</a>
+              <a class="dropdown-item" href="#">Aged Receivables Summary</a>
+              <a class="dropdown-item" href="#">Balance Sheet</a>
+              <a class="dropdown-item" href="#">Profit and Loss</a>
+              <a class="dropdown-item" href="#">Sales Tax Report</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item disabled" href="#"><i class="fa fa-star"></i> Advanced</a>
+              <a class="dropdown-item" href="#">Chart of accounts</a>
+              <a class="dropdown-item" href="#">Find and recode</a>
+              <a class="dropdown-item" href="#">Fixed assets</a>
+              <a class="dropdown-item" href="#">Manual journals</a>
+              
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">projects</a>
+            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <a class="dropdown-item" href="#">All projects</a>
+              <a class="dropdown-item" href="#">Time entries</a>
+              <a class="dropdown-item" href="#">Staff time overview</a>
+              <a class="dropdown-item" href="#">Staff cost rates</a>
+            </div> 
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">contacts</a>
+            <div class="dropdown-menu" aria-labelledby="projectsDropdown">
+              <a class="dropdown-item" href="#">All projects</a>
+              <a class="dropdown-item" href="#">Time entries</a>
+              <a class="dropdown-item" href="#">Staff time overview</a>
+              <a class="dropdown-item" href="#">Staff cost rates</a>
+            </div> 
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link mr-3" href="#"><i class="fa fa-plus"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-3" href="#"><i class="fa fa-search"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-3" href="#"><i class="fa fa-bell"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mr-3" href="#"
+              ><i class="fa fa-question-circle"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="second-nav">
+      <div class="container">
+        <p>
+          <span class="compant-name">Demo Company (Global)</span>
+          <span class="login-duration">
+            Your last login: <a href="#">41 minutes ago</a> from Pakistan</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="main-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Business Bank Account</a>
+              <p class="heading-two">090-8007-006543</p>
+              <hr />
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="btn btn-custom-info"
+                        >Reconcile 27 items</a
+                      >
+                    </td>
+                    <td class="text-right color-gray">
+                      Balance in Xero <br />
+                      Statement balance (Sep 24)
+                    </td>
+                    <td class="text-right color-black">
+                      1,760.54 <br />
+                      8,315.64
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <div id="chartContainerTwo" style="height: 200px; width: 100%"></div>
+            </div>
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Business Savings Account</a>
+              <p class="heading-two">121314-121314</p>
+              <hr />
+              <a href="#" class="heading-one">No transactions imported</a><br />
+              <a href="#">Import a bank statement to get started</a>
+            </div>
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Total cash in and out</a>
+              <hr />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Account watchlist</a>
+              <hr />
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td class="color-black h6">Account</td>
+                    <td class="text-right color-black h6">This month</td>
+                    <td class="text-right color-black h6">YTD</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="heading-two">Advertising (400)</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">0.00</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">9,657.05</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="#" class="heading-two">Entertainment (420)</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">0.00</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">1,553.60</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" class="heading-two">Inventory (630)</a></td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">0.00</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">0.00</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><a href="#" class="heading-two">Sales (200)</a></td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">0.00</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">22,973.18</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Invoices owed to you</a>
+              <hr />
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="btn btn-info-transparent">
+                        New sales invoice
+                      </a>
+                    </td>
+                    <td class="text-right color-gray">
+                      <a href="#" class="color-gray">2 Draft invoices</a> <br />
+                      <a href="#" class="color-gray">9 Awaiting payment</a>
+                      <br />
+                      <a href="#" class="color-red">9 Overdue</a>
+                    </td>
+                    <td class="text-right color-black">
+                      1, 100.00 <br />
+                      9,194.51 <br />
+                      <span class="color-red">9,194.51</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div id="chartContainerOne" style="height: 100px; width: 100%;"></div>
+            </div>
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Bills you need to pay</a>
+              <hr />
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="btn btn-info-transparent">
+                        New bill
+                      </a>
+                    </td>
+                    <td class="text-right color-gray">
+                      <a href="#" class="color-gray">Draft bills</a> <br />
+                      <a href="#" class="color-gray">12 Awaiting payment</a>
+                      <br />
+                      <a href="#" class="color-red">11 Overdue</a>
+                    </td>
+                    <td class="text-right color-black">
+                      00.00 <br />
+                      8,386.76 <br />
+                      <span class="color-red">6,254.25</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="dashboard-divs">
+              <a href="#" class="heading-one">Expense claims</a>
+              <hr />
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <td>
+                      <a href="#" class="btn btn-info-transparent">
+                        New claim
+                      </a>
+                    </td>
+                    <td class="text-right color-gray">
+                      <a href="#" class="color-gray">1 to draft</a> <br />
+                      <a href="#" class="color-gray">1 to review</a> <br />
+                      <a href="#" class="color-gray">1 to pay</a>
+                    </td>
+                    <td class="text-right color-black">
+                      00.00 <br />
+                      243.92 <br />
+                      <span>457.89</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr />
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td class="color-black">Recent submissions</td>
+                    <td class="text-right color-black">#</td>
+                    <td class="text-right color-black">Total</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span>User Name</span>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">1</a>
+                    </td>
+                    <td class="text-right">
+                      <a href="#" class="color-black">243.92</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </body>
+</html>
